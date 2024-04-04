@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrollytelling Narrative Visualization</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-container"></div>
+    <div class="container">
+        <div class="content">
+            <div class="text-container">
+                <section id="section1" class="section" data-scroll>
+                    <h1>Best Multi-Purpose Foods</h1>
+                    <p>Nutrition is crucial for maintaining a healthy lifestyle. However, identifying the most essential or effective nutrients can pose a challenge. Certain nutrient pairs are recognized for their synergistic effects, offering enhanced benefits when consumed together. Rather than focusing solely on traditional food combinations, this page highlights individual foods that naturally offer advantageous nutrient combinations. The data processing in this project considers the nutrient values per serving instead of the provided nutrient values per 100g, aiming for a more practical estimation of nutrient intake. I also removed 'Processed Foods' and 'Soups, Sauces, and Gravies' as the serving sizes <small class="citation">(Townsend JR, Kirby TO, Sapp PA, Gonzalez AM, Marshall TM, Esposito R. Nutrient synergy: definition, evidence, and future directions. Front Nutr. 2023 Oct 12;10:1279925. doi: 10.3389/fnut.2023.1279925. PMID: 37899823; PMCID: PMC10600480.)</small></p>
+                    <ul>
+                        <li><strong>Iron and Vitamin C:</strong> The combination of iron and vitamin C enhances the absorption of iron from dietary sources, thereby preventing anemia and supporting overall energy levels.</li>
+                        <li><strong>Magnesium and Potassium:</strong> Magnesium and potassium, when consumed together, play a crucial role in regulating muscle function, maintaining healthy blood pressure, and supporting cardiovascular health.</li>
+                        <li><strong>Fiber and Water: </strong> Adequate hydration is essential for the effective function of dietary fiber in promoting optimal digestion, preventing constipation, and supporting heart and metabolic health.</li>
+                        <li><strong>Vitamin A and Zinc:</strong> Pairing vitamin A-rich foods with zinc sources can bolster immune function, promote healthy vision, and support skin integrity, contributing to overall well-being.</li>
+                        <li><strong>Vitamin C and Vitamin E:</strong> The combination of vitamin C and vitamin E creates a potent antioxidant synergy, protecting cells from oxidative damage, supporting immune health, and promoting vibrant skin and cardiovascular function.</li>
+                    </ul>
+                </section>
+                <section id="section2" class="section with-plot" data-scroll>
+                    <h2>Iron & Vitamin C</h2>
+                    <p>The combination of iron and vitamin C enhances the absorption of iron from dietary sources, thereby preventing anemia and supporting overall energy levels. In addition to the well-known iron-rich beef, veal, and lamb products, it's worth mentioning that cabbage has also been identified as substantial sources of both iron and vitamin C.</p>
+                </section>
+                <section id="section3" class="section with-plot" data-scroll>
+                    <h2>Magnesium & Potassium</h2>
+                    <p> Magnesium and potassium, when consumed together, play a crucial role in regulating muscle function, maintaining healthy blood pressure, and supporting cardiovascular health. The plot suggests that nuts such as peanuts and almonds, along with seeds and grains including amaranth, buckwheat, barley, and wild rice are strong sources of both Magnesium and Potassium.</p>
+                </section>
+                <section id="section4" class="section with-plot" data-scroll>
+                    <h2>Fiber & Water</h2>
+                    <p>Adequate hydration is essential for the effective function of dietary fiber in promoting optimal digestion, preventing constipation, and supporting heart and metabolic health. Cabbage and Mammy-apples (similar to apricots), Endive and Cherimoya are all identified as strong sources of fiber and water. More accessible food sources include most greens along with various types of beans.</p>
+                </section>
+                <section id="section5" class="section with-plot" data-scroll>
+                    <h2>Vitamin A & Zinc</h2>
+                    <p>Pairing vitamin A-rich foods with zinc sources can bolster immune function, promote healthy vision, and support skin integrity, contributing to overall well-being. Veal, Pork, Lamb, Turkey, Chicken are all identified as good sources of vitamin A and Zinc. </p>
+                </section>
+                <section id="section6" class="section with-plot" data-scroll>
+                    <h2>Vitamin C & Vitamin E</h2>
+                    <p>The combination of vitamin C and vitamin E creates a potent antioxidant synergy, protecting cells from oxidative damage, supporting immune health, and promoting vibrant skin and cardiovascular function. different Cereals are highlighted as a good item that provides both vitamin C and E in conjunction.</p>
+                </section>
+            </div>
+        </div>
+        <div class="scatterplot-container">
+            <svg id="scatterplot" class="scatterplot" width="600" height="400"></svg>
+        </div>
+    </div>
+    <!-- Tooltip container -->
+    <div id="tooltip"></div>
+    <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- Custom JavaScript file -->
+    <script src="script.js" defer></script>
+</body>
+</html>
