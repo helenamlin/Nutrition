@@ -37,7 +37,7 @@
     font-family: 'Garamond', serif;
 }
 
-#section1 h1 {
+#section1 h1{
     font-size: 38px;
     text-align: center;
     color: #1F3D0C;
@@ -75,7 +75,6 @@ strong {
 }
 
 
-
 .section {
     margin: 20px;
     margin-bottom: 200px; 
@@ -86,7 +85,8 @@ strong {
 #section3,
 #section4,
 #section5,
-#section6 {
+#section6,
+#section7{
     margin: 20px;
     margin-bottom: 300px;
     scroll-margin-top: 500px;
@@ -98,9 +98,25 @@ strong {
 #section3 p,
 #section4 p,
 #section5 p,
-#section6 p {
+#section6 p, 
+#section7 p{
     font-family: 'Garamond', serif;
 }
+
+
+#section7 h1 {
+    font-size: 38px;
+    text-align: center;
+    color: #1F3D0C;
+    font-family: 'Copperplate', sans-serif; /* Ensure consistent font */
+}
+
+#section7 p {
+    font-size: 20px; /* Adjusted font size */
+    font-family: 'Garamond', serif;
+}
+
+
 
 .full-width {
     width: 100%;
