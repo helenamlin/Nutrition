@@ -156,38 +156,35 @@ function updateScatterplot() {
 
         switch (activeSection) {
             case 'section1':
-                createScatterplot(data, 'scatterplot', 'Iron_per', 'Vit_C_per', 'Iron & Vitamin C');
+                createScatterplot(window.data, 'scatterplot', 'Iron_per', 'Vit_C_per', 'Iron & Vitamin C');
                 break;
             case 'section2':
-                createScatterplot(data, 'scatterplot', 'Magnesium_per', 'Potassium_per', 'Magnesium & Potassium');
+                createScatterplot(window.data, 'scatterplot', 'Magnesium_per', 'Potassium_per', 'Magnesium & Potassium');
                 break;
             case 'section3':
-                createScatterplot(data, 'scatterplot', 'Fiber_TD_per', 'Water_per', 'Fiber & Water');
+                createScatterplot(window.data, 'scatterplot', 'Fiber_TD_per', 'Water_per', 'Fiber & Water');
                 break;
             case 'section4':
-                createScatterplot(data, 'scatterplot', 'Vit_A_per', 'Zinc_per', 'Vitamin A & Zinc');
+                createScatterplot(window.data, 'scatterplot', 'Vit_A_per', 'Zinc_per', 'Vitamin A & Zinc');
                 break;
             case 'section5':
             default:
-                createScatterplot(data, 'scatterplot', 'Vit_C_per', 'Vit_E_per', 'Vitamin C & Vitamin E');
+                createScatterplot(window.data, 'scatterplot', 'Vit_C_per', 'Vit_E_per', 'Vitamin C & Vitamin E');
                 break;
         }
     } else if (isBottom) {
         // If scrolled to the bottom of the page, show the last plot
         d3.select('#scatterplot').selectAll('*').remove(); // Remove existing scatterplot
-        createScatterplot(data, 'scatterplot', 'Vit_C_per', 'Vit_E_per', 'Vitamin C & Vitamin E');
+        createScatterplot(window.data, 'scatterplot', 'Vit_C_per', 'Vit_E_per', 'Vitamin C & Vitamin E');
     }
 }
 
 // Fetch data and create scatterplot initially
 fetchData().then(data => {
+    // Store data globally to access it in updateScatterplot function
+    window.data = data;
     // Initial creation of scatterplot
-    createScatterplot(data, 'scatterplot', 'Iron_per', 'Vit_C_per', 'Iron & Vitamin C');
-
-    // Listen for scroll events
-    window.addEventListener('scroll', function () {
-        updateScatterplot(data);
-    });
+    createScatterplot(window.data, 'scatterplot', 'Iron_per', 'Vit_C_per', 'Iron & Vitamin C');
 });
 
 // Listen for scroll events
