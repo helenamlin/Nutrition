@@ -1,6 +1,6 @@
 // Async function to fetch CSV data
 async function fetchData() {
-    const response = await fetch('https://raw.githubusercontent.com/helenamlin/Nutrition/main/nutrition.csv');
+    const response = await fetch('./nutrition.csv');
     const data = await response.text();
     return data;
 }
@@ -156,35 +156,35 @@ function updateScatterplot() {
 
         switch (activeSection) {
             case 'section1':
-                createScatterplot(window.data, 'scatterplot', 'Iron_per', 'Vit_C_per', 'Iron & Vitamin C');
+                createScatterplot(data, 'scatterplot', 'Iron_per', 'Vit_C_per', 'Iron & Vitamin C');
                 break;
             case 'section2':
-                createScatterplot(window.data, 'scatterplot', 'Magnesium_per', 'Potassium_per', 'Magnesium & Potassium');
+                createScatterplot(data, 'scatterplot', 'Magnesium_per', 'Potassium_per', 'Magnesium & Potassium');
                 break;
             case 'section3':
-                createScatterplot(window.data, 'scatterplot', 'Fiber_TD_per', 'Water_per', 'Fiber & Water');
+                createScatterplot(data, 'scatterplot', 'Fiber_TD_per', 'Water_per', 'Fiber & Water');
                 break;
             case 'section4':
-                createScatterplot(window.data, 'scatterplot', 'Vit_A_per', 'Zinc_per', 'Vitamin A & Zinc');
+                createScatterplot(data, 'scatterplot', 'Vit_A_per', 'Zinc_per', 'Vitamin A & Zinc');
                 break;
             case 'section5':
             default:
-                createScatterplot(window.data, 'scatterplot', 'Vit_C_per', 'Vit_E_per', 'Vitamin C & Vitamin E');
+                createScatterplot(data, 'scatterplot', 'Vit_C_per', 'Vit_E_per', 'Vitamin C & Vitamin E');
                 break;
         }
     } else if (isBottom) {
         // If scrolled to the bottom of the page, show the last plot
         d3.select('#scatterplot').selectAll('*').remove(); // Remove existing scatterplot
-        createScatterplot(window.data, 'scatterplot', 'Vit_C_per', 'Vit_E_per', 'Vitamin C & Vitamin E');
+        createScatterplot(data, 'scatterplot', 'Vit_C_per', 'Vit_E_per', 'Vitamin C & Vitamin E');
     }
 }
 
 // Fetch data and create scatterplot initially
 fetchData().then(data => {
     // Store data globally to access it in updateScatterplot function
-    window.data = data;
+    data = data;
     // Initial creation of scatterplot
-    createScatterplot(window.data, 'scatterplot', 'Iron_per', 'Vit_C_per', 'Iron & Vitamin C');
+    createScatterplot(data, 'scatterplot', 'Iron_per', 'Vit_C_per', 'Iron & Vitamin C');
 });
 
 // Listen for scroll events
