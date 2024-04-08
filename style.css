@@ -119,20 +119,12 @@ strong {
     width: 100%;
 }
 
-#section7 {
-    margin: 20px;
-    margin-bottom: 300px;
-    scroll-margin-top: 500px;
-    width: calc(50% - 20px); 
-    font-family: 'Copperplate', sans-serif;
-    float: left; 
-}
-
+/*
 .scatterplot-container {
     margin-left: 20px;
-    width: calc(50% - 20px); /* Adjusted width */
-    float: right; /* Float the scatterplot to the right */
-}
+    width: calc(50% - 20px);
+    float: right; 
+}*/
 
 
 .scatterplot {
