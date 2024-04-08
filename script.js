@@ -181,10 +181,13 @@ function updateScatterplot() {
 
 // Fetch data and create scatterplot initially
 fetchData().then(data => {
-    // Store data globally to access it in updateScatterplot function
-    data = data;
     // Initial creation of scatterplot
     createScatterplot(data, 'scatterplot', 'Iron_per', 'Vit_C_per', 'Iron & Vitamin C');
+
+    // Listen for scroll events
+    window.addEventListener('scroll', function () {
+        updateScatterplot(data);
+    });
 });
 
 // Listen for scroll events
