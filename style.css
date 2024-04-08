@@ -22,105 +22,19 @@
     color: #1F3D0C; 
 }
 
-#section1 p {
-    font-size: 20px; 
-    color: #1F3D0C;
-    text-align: center;
-    font-family: 'Garamond', serif;
-}
-
-#section1 ul {
-    font-size: 16px; 
-    color: #1F3D0C;
-    font-family: 'Garamond', serif;
-}
-
-#section1 h1{
-    font-size: 38px;
-    text-align: center;
-    color: #1F3D0C;
-    font-family: 'Copperplate', sans-serif;
-}
-
-.section h2,
-.section p {
-    color: #1F3D0C;
-}
-
-.citation {
-    font-size: 12px;
-}
-
-strong {
-    font-family: 'Copperplate', sans-serif;
-    font-size: 20px;
-}
-
-.scatterplot {
-    position: fixed;
-    top: calc(50% - 50px); 
-    right: 20px;
-    margin-top: 100px;
-    margin-bottom: 100px; 
-    background-color: transparent; 
-}
-
-.scatterplot text,
-.scatterplot .axis text {
-    fill: #1F3D0C; 
-}
-
 .section {
     margin: 20px;
-    margin-bottom: 200px; 
+    margin-bottom: 300px; /* Adjusted margin */
     scroll-margin-top: 500px;
-}
-
-#section2,
-#section3,
-#section4,
-#section5,
-#section6,
-#section7{
-    margin: 20px;
-    margin-bottom: 300px;
-    scroll-margin-top: 500px;
-    width: calc(100% - 620px);
+    width: calc(50% - 40px); /* Adjusted width */
     font-family: 'Copperplate', sans-serif;
-}
-
-#section2 p,
-#section3 p,
-#section4 p,
-#section5 p,
-#section6 p, 
-#section7 p{
-    font-family: 'Garamond', serif;
-}
-
-#section7 h1 {
-    font-size: 38px;
-    text-align: center;
-    color: #1F3D0C;
-    font-family: 'Copperplate', sans-serif; 
-}
-
-#section7 p {
-    font-size: 20px; 
-    font-family: 'Garamond', serif;
-}
-
-#section7 strong {
-    font-family: 'Copperplate', sans-serif; /* Keep strong parts in Copperplate font */
-    font-size: 20px;
-}
-
-.full-width {
-    width: 100%;
+    float: left; /* Float the section to the left */
 }
 
 .scatterplot-container {
     margin-left: 20px;
+    width: calc(50% - 40px); /* Adjusted width */
+    float: right; /* Float the scatterplot to the right */
 }
 
 .scatterplot {
@@ -135,6 +49,12 @@ strong {
     .scatterplot-container {
         margin-left: 0;
         margin-top: 20px;
+    }
+
+    .section {
+        width: 100%; /* Adjust width for smaller screens */
+        float: none; /* Remove float for smaller screens */
+        margin-right: 0; /* Remove right margin for smaller screens */
     }
 }
 
