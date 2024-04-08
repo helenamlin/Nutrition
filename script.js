@@ -1,6 +1,6 @@
 // Async function to fetch CSV data
 async function fetchData() {
-    const response = await fetch('./nutrition.csv');
+    const response = await fetch('https://raw.githubusercontent.com/helenamlin/Nutrition/main/nutrition.csv');
     const data = await response.text();
     return data;
 }
